@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dawascope products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .container{
+      width: 80%;
+      margin:0 auto;
+      /* align-items: center; */
+    }
+    header{
+      text-align: center;
+    }
+  
+    section{
+      /* text-align: center; */
+      font-size: 1.3em;
+    } 
+    .banner{
+      margin:0;
+      margin-bottom: 2em;
+    }
+    section h5{
+      margin:0;
+      font-size: 1.5em;
+    }
+    a{
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    footer{
+      /* margin:0 auto; */
+      margin-left:20%;
+      margin-right: 20%;
+    }
+    .social-media{
+      /* margin:0 auto; */
+      margin-top:4em;
+      margin-bottom:2em;
+      /* justify-content: center; */
+      /* align-items: center; */
+      padding-left:2.5em;
+      /* padding-right: 2em; */
+      /* display:flex;
+      gap:2em; */
+    }
+    .social-media-icons{
+      /* background: rgb(12, 232, 12); */
+    }
+    .social-media img{
+      border-radius: 50%;
+      width: 30px;
+      /* background: rgb(112, 215, 112); */
+
+    }
+    .social-media img:nth-child(1){
+      margin-left:1.5em;
+    }
+    .social-media img:nth-child(2) img:nth-child(2){
+      margin:2em;
+
+    }
+
+    footer h6{
+      font-size: 1.2em;
+    }
+
+    .address{
+      margin-bottom: 2em;
+    }
+    .address svg{
+      /* line-height: 1em; */
+      position: relative;
+       top: 0.3em;
+  
+    }
+    .address h6{
+      /* font-size: 1em; */
+      /* margin:0 auto; */
+      /* margin-bottom:1em; */
+      /* margin-left:.8em; */
+      /* line-height: 1em; */
+    }
+    .location{
+      justify-content: center;
+      padding:0;
+      /* gap:2em; */
+      margin-bottom: 1em;
+      display:flex;
+      /* flex-direction: column; */
+    }
+    /* .location h6{
+      margin:0;
+      padding:0;
+    } */
+    .phone{
+      justify-content: center;
+      padding:0;
+      gap:2em;
+      display:flex;
+    }
+
+    
+ 
+    .copy-rights{
+      margin:0;
+    }
+    .address img{
+      width: 50px;
+      height: 35px;
+    }
+    @media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .social-media{
+      margin-top:4em;
+      align-items: center;
+      padding-left:5em;
+      padding-right: 2em;
+    }
+}
+
+  </style>  
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684153809/download_vmjdgi.png" alt="dawa-logo">
+      <h1>Dawascope Technologies</h1>
+    </header>
+    <section>
+      <img class="banner" width="100%" height="300" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEgWe_NbBT_A/v0/-999x-999.gif" alt="banner">
+  
+      <h5>
+        Dear Client!,
+      </h5>
+      <p>Our client is looking for <strong>{{.Message}}</strong> if you have it in stock, kindly post it in your portal as soon as possible for them to find you, click here to
+      <a href="http://20.9.33.250/retailer_type" target="_blank" >add product</a></p>
+    </section>
+
+    <footer>
+
+      <div class="social-media">
+        <a href="#"><img class="social-media-icons twitter" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684734192/download_4_g1zqa8.png" alt="facebook-icon"></a>
+        <a href="#"><img class="social-media-icons linkedin" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684736434/pngegg_3_du8thk.png" alt="facebook-icon"></a>
+        <a href="#"><img class="social-media-icons facebook" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684736196/pngegg_2_pkstvv.png" alt="facebook-icon"></a>     
+        
+      
+      </div>
+      <div class="address">
+        <div class="location">
+          <img class="address-icons" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684743561/pngegg_6_wqucxy.png" alt="address">
+          Imani House, Juja
+        </div>
+        <div class="phone">
+         <img class="address-icons" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1684743561/pngegg_5_vnhknm.png" alt="phone">
+          +254712979721
+        </div>
+      </div>
+      <h6 class="copy-rights">©2023 Dawascope Technologies, All Rights Reserved</h6>
+    </footer>
+  </div>
+  
+
+
+ 
+</body>
+
+</html>
+
+<!-- <h4 class="salute">Hey,</h4>
+<div class="container">
+  <div class="row">
+    <div class="row-one">
+      <h2 class="text-content">
+        A client is looking for <strong>{{.Message}}</strong> if you have it in stock, kindly post it in your portal asap for them to find you.<a href="http://20.9.33.250/retailer_type" target="_blank" >add product</a>
+      </h2>
+    </div>
+    <div class="row-two">
+      <img class = "sell-image" src="https://res.cloudinary.com/dlkjbxanc/image/upload/v1681281039/go-cloudinary/dhndbwasy8frytn83uzg.jpg"  alt="sell drugs">
+    </div>
+  </div>
+</div>
+<div class="advert">
+  <h3>Did you know that you can refr patients to clinic/labs and earn cash and get the patient sent back for medication at your pharmacy? <a href="http://20.9.33.250/retailer_type" target="_blank" >Refer patient now</a></h3>
+</div> -->
+
