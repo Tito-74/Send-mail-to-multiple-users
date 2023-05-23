@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	// "os"
 
 	// "net/http"
 
@@ -28,11 +29,14 @@ func sendToMultipleRecipientsWithGomailV2(recipients []recipient, subject string
 	path := "templates/mail.html"
 
 	// http.Handle("/images/", http.StripPrefix("/images", http.FileServer(http.Dir("./images"))))
-	Configpath :="/" 
+	Configpath :="dawascope/" 
 	config, err := config.LoadConfig(Configpath)
 	if err != nil {
 		return err
 	}
+	fmt.Println("pass", config.EMAILPass)
+	fmt.Println("email", config.EMAILHost)
+	
 	
 
 	for i, recipient := range recipients {
@@ -53,10 +57,13 @@ func sendToMultipleRecipientsWithGomailV2(recipients []recipient, subject string
         Message string
     }{Name: name, Message: message})
 
-	mail.SetHeader("From", "kipkirui133@gmail.com")
+	mail.SetHeader("From", config.EMAILHost)
 	mail.SetHeader("Bcc", addresses...)
 	mail.SetHeader("Subject", subject)
 	mail.SetBody("text/html", body.String())
+
+	// fmt.Println("host", os.Getenv("EMAIL"))
+	// fmt.Println("pass", config.EMAILPass)
 
 	dialer := gomail.Dialer{Host: "smtp.gmail.com", Port: 587, Username: config.EMAILHost, Password: config.EMAILPass}
 	if err := dialer.DialAndSend(mail); err != nil {
